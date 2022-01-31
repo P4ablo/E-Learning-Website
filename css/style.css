@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+nav{
+    margin: 20px auto;
+    text-align: center;
+    max-width: 1440px;
+
+}
+
+nav a:hover{
+    border-bottom: 2px solid #555;
+    color: black;
+}
+
+nav a{
+    font-size: 1.8rem;
+    display: inline-block;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #555;
+    padding: 10px;
+    margin: 0 20px;
+
+}
+
+nav a.reservation{
+    font-size: 2rem;
+    border: 2px solid #555;
+    padding: 10px 30px;
+    letter-spacing: 1px;
+}
+
+nav a.reservation:hover{
+    color: black;
+}
+
+nav a.login-img{
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+nav a.login-img:hover {
+    text-decoration: none;
+}
+
+header{
+    background-image: url("../img/header-img.png");
+    height: 40vh;
+    background-size: cover;
+
+}
+
+main{
+    max-width: 1440px;
+    margin: 5vh auto;
+    font-size: 0;
+
+}
+
+main p.description{
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0 30px 50px 30px;
+    line-height: 180%;
+}
+main div.feature{
+    display: inline-block;
+    width: 33.33%;
+}
+
+main span.image{
+    display: block;
+    height: 200px;
+    background-image: url("../img/mat.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 20px 30px;
+
+}
+main span.image2{
+    display: block;
+    height: 200px;
+    background-image: url("../img/fiz.jpg");
+    background-position: center top;
+    background-size: cover;
+    margin: 20px 30px;
+
+}
+main span.image3{
+    display: block;
+    height: 200px;
+    background-image: url("../img/ang.jpg");
+    background-position: center top;
+    background-size: cover;
+    margin: 20px 30px;
+
+}
+footer{
+    background-color: black;
+    height: 20vh;
+}
+
+.media_icons {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer i {
+    font-size: 50px;
+    color: white;
+    padding-right: 30px;
+    padding-top: 50px;
+    margin-top: 50px;
+}
+
+header h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    line-height: 40vh;
+    background-color: rgba(0,0,0,50%);
+}
+
+.menu-wrap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.toggler{
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	width: 60px;
+	height: 60px;
+	z-index: 3;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.hamburger{
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	width: 60px;
+	height: 60px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: #111;
+}
+
+.hamburger>div{
+	position: absolute;
+	width: 60%;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color:#8C001A;
+	transition: .4s;
+}
+
+.hamburger>div:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color:#8C001A;
+	top: -10px;
+	left: 0;
+	transition: .4s;
+}
+
+.hamburger>div:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color:#8C001A;
+	top: 10px;
+	left: 0;
+	transition: .4s;
+}
+
+.toggler:checked + .hamburger>div{
+	transform: rotate(135deg);
+}
+
+.toggler:checked:hover + .hamburger>div{
+	transform: rotate(225deg);
+}
+
+.toggler:checked + .hamburger>div:before, .toggler:checked + .hamburger>div:after{
+	top: 0;
+	transform: rotate(90deg);
+}
+
+.menu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	transition: .6s;
+}
+
+.menu > div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-150%) translateY(-50%);
+    width: 1600px;
+    height: 1600px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: .6s;
+}
+
+.menu > div > div{
+	max-width: 90vw;
+	max-height: 100vh;
+	opacity: 0;
+	transition: .6s;
+}
+
+.menu > div > div > ul > li{
+	list-style: none;
+}
+
+.menua{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 550;
+	text-transform: uppercase;
+	margin: .5rem;
+	transition: .3s;
+	font-size: 40px;
+	display: inline-block;
+    padding-bottom: 10px;
+}
+
+.menu > div > div > ul > li > a:hover{
+	color: #8C001A;
+}
+
+.toggler:checked ~ .menu{
+	visibility: visible;
+}
+
+.toggler:checked ~ .menu > div{
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.toggler:checked ~ .menu > div > div{
+	opacity: 1;
+}
+
+#clock {
+    color: white;
+    font-size: 25px;
+}

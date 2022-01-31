@@ -1,0 +1,47 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+.backButton {
+    font-size: 20px;
+    text-align: center;
+    width: 100px;
+}
+
+.addInput {
+    width: 100px;
+    text-align: center;
+    background-color: green;
+} 
+
+.deleteInput {
+    width: 100px;
+    text-align: center;
+    background-color: red;
+}
+
+.editInput {
+    width: 100px;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+}
+
+.sendInput {
+    width: 100px;
+    text-align: center;
+    background-color: green;
+    margin-top: 10px;
+}
+
+.addButton {
+    background-color: green;
+    margin-bottom: 15px;
+}
+
+.sendInputPass {
+    text-align: center;
+    background-color: green;
+    margin-top: 10px;
+}
